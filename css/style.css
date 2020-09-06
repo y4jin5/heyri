@@ -91,6 +91,9 @@ body{
                         border-bottom:2px solid #FC0; padding-bottom:25px; color:#FC0;} */
                         
 						@media(max-width: 1100px){
+							.menu_box{
+								height: 50px;
+							}
 							.menu_box>ul>a{
 								display: block;
 								
@@ -101,7 +104,8 @@ body{
 								display: none;
 								float: none;
 								text-align: right;
-								background: rgb(29, 29, 29, );
+								color: #fff;
+								background: rgba(20,20,20,0.95);
 								padding-right: 20px;
 							}
 							.logo a{
@@ -120,9 +124,8 @@ body{
 	position: relative;
 	width: 24px;
 	height: 24px;
-	margin: 0 auto;
+	margin: 12% auto 0;
 	z-index: 99;
-	top: 800px;
   }
   
   .chevron {
@@ -183,7 +186,7 @@ body{
   }
   
   .text {
-	display: block;
+	
 	margin-top: 75px;
 	margin-left: -30px;
 	font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
@@ -201,13 +204,13 @@ body{
 	}
   }
 .main-banner{
-    padding:46px 0 0;
+    padding:70px 0 0;
 
 }
 .main-conts{
     width: 85%;
 	margin: 0 auto;
-	padding: 18% 0;
+	padding: 18% 0 7%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -236,8 +239,15 @@ body{
 	.main-conts>p{
 		font-size: 30px;
 	}
+	.main-banner{
+		padding:50px 0 0;
+	}
 	.main-conts>img{
 		width: 20%;
+	}
+	.container{
+		top: 0;
+		bottom: 500px; 
 	}
 }
 @media(max-width: 500px){
@@ -343,6 +353,9 @@ body{
         height: 390px;
         background-attachment: unset;
 	}
+	#section02>p{
+		font-size: 100px;
+	}
 
 }
 @media(max-width: 500px){
@@ -367,6 +380,9 @@ body{
 		height: 300px;
 		margin: 5% auto 0;
 		width: 80%;
+	}
+	#section02>p{
+		font-size: 50px;
 	}
 
 }
@@ -395,7 +411,6 @@ body{
 	/* font-weight: bold; */
 	font-size: 40px;
 	text-align: left;
-	padding: 0 0 2%;
 }
 .sec03-conts ul{
 	background:rgba(0,0,0,0.3) ;
@@ -444,10 +459,13 @@ body{
 
 .swiper-container {
 	margin-top: 1%;
-	width: 80%;
+	margin-bottom: 1%;
+	width: 85%;
 	height: 100%;
   }
-
+  .swiper-slide img{
+	margin: 0 0 0 -15%;
+}
   .swiper-slide {
 	  overflow: hidden;
 	  height: 100%;
@@ -609,6 +627,10 @@ body{
 	.sec03-conts li>a>p{
 		font-size: 13px;
 	}
+	.swiper-container{
+		padding: 15% 0;
+		font-size: 20px;
+	}
 }
 
 
@@ -699,18 +721,20 @@ body{
 @media(max-width: 1100px){
 	#section04>.conts-area{
 		flex-direction: column;
-		width: 90%;
-		margin: 0 5%;
+		width: 100%;
+		
 	}
 	.card{
 		width: 100%;
-		height: 500px;
 	}
 	#section04>h1{
 		font-size: 23px;
 	}
-	.card:hover .imgh1{
-		padding: 102% 0 0;
+	.imgBx{
+		padding: 12% 0;
+	}
+	.imgh1{
+		font-size: 20px;
 	}
 }
 
@@ -748,6 +772,9 @@ body{
 .map-txt-2>div{
 	display: flex;
 	width: 50%;
+}
+#map{
+	width:100%;height:600px;
 }
 
 
@@ -852,6 +879,27 @@ body{
 	15%  {opacity: 0;}
 	100% {opacity: 1;}
 }
+@media(max-width: 1100px){
+	.map{
+		flex-direction: column;
+	}
+	.map-area{
+		width: 100%;
+	}
+	.tabarea{
+		width: 100%;
+	}
+	#map{
+		height: 300px;
+	}
+	.tabcontent{
+		padding: 10% 0;
+		font-size: 15px;
+	}
+	#section05>h1{
+		font-size: 23px;
+	}
+}
 
 .footer{
 	background-attachment: fixed;
@@ -883,6 +931,11 @@ body{
 .footer-logo>img{
 	justify-items: flex-end;
 	width: 100%;
+}
+@media(max-width: 1100px){
+	.footer-logo>img{
+		display: none;
+	}
 }
 
 
