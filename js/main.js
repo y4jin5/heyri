@@ -79,7 +79,7 @@ document.getElementById("defaultOpen").click();
         return false;
     });
     }
-    
+  
 
 
     $(function(){
@@ -174,7 +174,3 @@ yAnchor: 1
       },
     });
 
-
-
-    
-    
