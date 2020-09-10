@@ -5,12 +5,18 @@
 <meta http-equiv="X-UA-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>헤이리예술마을 | Heyri-art-valley</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<!-- <link rel="stylesheet" href="css/animate.css">
+<script src="js/wow.min.js"></script> -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 
 <style>
 *{list-style:none; margin:0; padding:0;}
@@ -45,22 +51,36 @@
     <div class="main-conts">
     <img src="images/logo+.png" alt="logo">
     <p>HAYRI ART VALLEY</p>
-    <div class="container">
+    <!-- <div class="container">
         <div class="chevron"></div>
         <div class="chevron"></div>
         <div class="chevron"></div>
         <span class="text">Scroll down</span>
-      </div>
+      </div> -->
+      <a href="#section01" class="ontop" id="ontop">
+      <div class="mouse_scroll">
+        
+		<div class="mouse">
+			<div class="wheel"></div>
+		</div>
+		<div>
+			<span class="m_scroll_arrows unu"></span>
+			<span class="m_scroll_arrows doi"></span>
+			<span class="m_scroll_arrows trei"></span>
+        </div>
+    </a>
+</div>
 </div>
 
 </div>
 </div>
 <!-- section01 -->
 <div id="section02" class="section2">
-    <p class="slideLeft">INTRODUCE</p>
+    
+    <p data-aos="fade-right" aos-duration="1500">INTRODUCE</p>
     <div class="conts-area-02">
         
-        <div class="text-box01 fade">
+        <div class="text-box01" data-aos="fade-up" aos-duration="2000">
             <h1>ㅡ<br><br>
                 헤이리예술마을</h1>
             <h2>예술인들이 꿈꾸는 지상에서 가장 아름다운 마을</h2>
@@ -72,7 +92,7 @@
                 마을 이름은 경기 파주 지역에 전해져 내려오는 노동요 ‘헤이리 소리 ’ 에서 따왔습니다.
             </p>
         </div>
-        <div class="img-box01 fade">
+        <div class="img-box01" data-aos="fade-up" data-aos-delay="300" aos-duration="2000">
         </div>
     </div>
     <!-- <div class="deco-bar"><p>Heyri-art-valley </p></div> -->
@@ -80,14 +100,16 @@
 </div>
 <!-- section02 -->
 <div id="section03" class="section3">
+    <p class="slideRight" data-aos="fade-left">PLACE</p>
     <div class="sec03-conts">
-        <h1>파주 헤이리예술마을 <br> 주요 볼거리</h1>
+        
+        <h1 data-aos="fade-up" aos-duration="800">파주 헤이리예술마을 <br> 주요 볼거리</h1>
                         <!-- 첫 번째 Modal -->
                         <div class="modal">
             
                             <!-- 첫 번째 Modal의 내용 -->
                             <div class="modal-content">
-                            <span class="close">&times;</span><br> <br>                       
+                            <span class="close" style="color: #333;">&times;</span><br> <br>                       
                             <p>류재은 베이커리는 유명 제빵사인 류재은씨가 운영하는 베이커리로 마늘 바게트가 가장 유명하다.
                                 파주 전 지역에 체인점이 있을 정도로 인기 있고 마늘빵 외에도 다양하고 퀄리티 있는 빵을 판매한다.</p><br>
                                 <p>운영시간: am 09:00 ~ pm 10:30 <br>
@@ -156,15 +178,13 @@
                         </div>
                         
           <!-- Swiper -->
-          <div class="swiper-container">
+          <div class="swiper-container" data-aos="fade-up"  data-aos-delay="300" aos-duration="3000">
             <div class="swiper-wrapper">
-              <div class="swiper-slide"><a class="btn"><img src="images/place_img01.jpg" alt=""><p>01</p><p>류재은 베이커리</p></a></div>
-              
-
-              <div class="swiper-slide"><a class="btn"><img src="images/place_img02.jpg" alt=""><p>02</p><p>잇츠콜라 박물관</p></a></div>
-              <div class="swiper-slide"><a class="btn"><img src="images/place_img03.jpg" alt=""><p>03</p><p>가드너스</p></a></div>
-              <div class="swiper-slide"><a class="btn"><img src="images/place_img04.jpg" alt=""><p>04</p><p>석보 차 박물관</p></a></div>
-              <div class="swiper-slide"><a class="btn"><img src="images/place_img05.jpg" alt=""><p>05</p><p>카페 호메오</p></a></div>
+              <div class="swiper-slide"><a class="btn"><img src="images/place_img01.jpg" alt=""><p>01</p><p>류재은 베이커리<i class="xi-long-arrow-right"></i></p></a></div>
+              <div class="swiper-slide"><a class="btn"><img src="images/place_img02.jpg" alt=""><p>02</p><p>잇츠콜라 박물관<i class="xi-long-arrow-right"></i></p></a></div>
+              <div class="swiper-slide"><a class="btn"><img src="images/place_img03.jpg" alt=""><p>03</p><p>가드너스<i class="xi-long-arrow-right"></i></p></a></div>
+              <div class="swiper-slide"><a class="btn"><img src="images/place_img04.jpg" alt=""><p>04</p><p>석보 차 박물관<i class="xi-long-arrow-right"></i></p></a></div>
+              <div class="swiper-slide"><a class="btn"><img src="images/place_img05.jpg" alt=""><p>05</p><p>카페 호메오<i class="xi-long-arrow-right"></i></p></a></div>
             </div>
             <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
@@ -176,10 +196,12 @@
     </div>
 </div>
 <!-- section03 -->
+
 <div id="section04" class="section4">
-    <h1>헤이리 근방 <br> 관광명소 안내</h1>
+    <p data-aos="fade-right" aos-duration="1500"   data-aos-offset="-1000" >NEARBY</p>
+    <h1 data-aos="fade-up" aos-duration="5000" data-aos-offset="-1000">헤이리 근방 <br> 관광명소 안내</h1>
     <div class="conts-area">
-    <div class="card">
+    <div class="card"  data-aos="fade-up" aos-duration="5000" data-aos-offset="-1000">
         <div class="imgBx">
             <h1 class="imgh1">프로방스마을 <br> ㅡ</h1>
             <a href="https://provence.town/">프로방스마을 사이트 바로가기 >></a>
@@ -188,8 +210,8 @@
         
         
     
-    <div class="card">
-        <div class="imgBx">
+    <div class="card" data-aos="fade-up" aos-duration="5000" data-aos-offset="-1000" data-aos-delay="150">
+        <div class="imgBx" >
             <h1 class="imgh1">파주프리미엄아울렛 <br> ㅡ</h1>
             <a href="https://www.premiumoutlets.co.kr/paju/">파주프리미엄아울렛 사이트 바로가기 >></a>
         </div>
@@ -197,7 +219,7 @@
         
             
 
-        <div class="card">
+        <div class="card" data-aos="fade-up" aos-duration="5000"  data-aos-offset="-1000" data-aos-delay="300">
             <div class="imgBx">
                 <h1 class="imgh1">오두산통일전망대 <br> ㅡ</h1>
                 <a href="http://www.jmd.co.kr/">오두산통일전망대 사이트 바로가기 >></a>
@@ -211,14 +233,15 @@
 </div>
 <!-- section04 -->
 <div id="section05" class="section5">
-    <h1>헤이리예술마을 <br>오시는 길</h1>
+    <p class="slideRight2" data-aos="fade-left" aos-duration="1500"  data-aos-offset="-1000">CONTACT</p>
+    <h1 data-aos="fade-up" aos-duration="1500"  data-aos-offset="-1000">헤이리예술마을 <br>오시는 길</h1>
     <div class="map">
 
-        <div class="map-area">
+        <div class="map-area" data-aos="fade-up" aos-duration="1500"  data-aos-delay="300" data-aos-offset="-1000">
             <div id="map"></div>
 
         </div>
-        <div class="tabarea">
+        <div class="tabarea" data-aos="fade-up" aos-duration="1500" data-aos-delay="600" data-aos-offset="-1000">
             <!-- Tab links -->
     <div class="tab">
         <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">자가용 이용 시</button>

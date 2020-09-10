@@ -1,3 +1,8 @@
+// wow = new WOW()
+//   wow.init();
+  AOS.init();
+
+
 function openCity(evt, cityName) {
   // Declare all variables
   var i, tabcontent, tablinks;
@@ -24,63 +29,91 @@ document.getElementById("defaultOpen").click();
 	/**스크롤이 설정한 높이 이상 내려갔을때 스타일추가하기**/
 	if (jQuery(window).width() > 0) {
     jQuery(window).on("scroll",function(ev){
-        if(jQuery(window).scrollTop() > 150 ) { /**높이 픽셀 조정**/
-            jQuery('.menu_box').addClass('fixed');  /**위의 높이에서 .fixed 클래스를 추가합니다. 스타일에서 자유롭게 수치 조절 가능합니다.**/
+        if(jQuery(window).scrollTop() > 150 ) { 
+            jQuery('.menu_box').addClass('fixed');
+
         }
         else{
             jQuery('.menu_box').removeClass('fixed');
-        }
-        return false;
-    });
-    }
-    if (jQuery(window).width() > 0) {
-    jQuery(window).on("scroll",function(ev){
-        if(jQuery(window).scrollTop() > 200 ) { /**높이 픽셀 조정**/
-            jQuery('.slideLeft').addClass('ani');
-            jQuery('.fade').addClass('ani2');  /**위의 높이에서 .fixed 클래스를 추가합니다. 스타일에서 자유롭게 수치 조절 가능합니다.**/
-        }
-        else{
-            jQuery('.slideLeft').removeClass('ani');
-            jQuery('.fade').removeClass('ani2');
-        }
-        return false;
-    });
-    }
-    if (jQuery(window).width() > 0) {
-    jQuery(window).on("scroll",function(ev){
-        if(jQuery(window).scrollTop() > 1000 ) { /**높이 픽셀 조정**/
-            jQuery('.section3').addClass('ani3');  /**위의 높이에서 .fixed 클래스를 추가합니다. 스타일에서 자유롭게 수치 조절 가능합니다.**/
-        }
-        else{
-            jQuery('.section3').removeClass('ani3');
-        }
-        return false;
-    });
-    }
-    if (jQuery(window).width() > 0) {
-    jQuery(window).on("scroll",function(ev){
-        if(jQuery(window).scrollTop() > 2000 ) { /**높이 픽셀 조정**/
-            jQuery('.section4').addClass('ani4');  /**위의 높이에서 .fixed 클래스를 추가합니다. 스타일에서 자유롭게 수치 조절 가능합니다.**/
-        }
-        else{
-            jQuery('.section4').removeClass('ani4');
-        }
-        return false;
-    });
-    }
-    if (jQuery(window).width() > 0) {
-    jQuery(window).on("scroll",function(ev){
-        if(jQuery(window).scrollTop() > 3000 ) { /**높이 픽셀 조정**/
-            jQuery('.section5').addClass('ani5');  /**위의 높이에서 .fixed 클래스를 추가합니다. 스타일에서 자유롭게 수치 조절 가능합니다.**/
-        }
-        else{
-            jQuery('.section5').removeClass('ani5');
-        }
-        return false;
-    });
-    }
-  
 
+            
+        }
+        return false;
+    });
+    }
+    // if (jQuery(window).width() > 0) {
+    // jQuery(window).on("scroll",function(ev){
+    //     if(jQuery(window).scrollTop() > 200 ) { /**높이 픽셀 조정**/
+    //         jQuery('.slideLeft').addClass('ani');
+    //         jQuery('.fade').addClass('ani2');  /**위의 높이에서 .fixed 클래스를 추가합니다. 스타일에서 자유롭게 수치 조절 가능합니다.**/
+    //     }
+    //     else{
+    //         jQuery('.slideLeft').removeClass('ani');
+    //         jQuery('.fade').removeClass('ani2');
+    //     }
+    //     return false;
+    // });
+    // }
+    // if (jQuery(window).width() > 0) {
+    // jQuery(window).on("scroll",function(ev){
+    //     if(jQuery(window).scrollTop() > 1000 ) { /**높이 픽셀 조정**/
+    //         jQuery('.section3').addClass('ani3');
+    //         jQuery('.slideRight').addClass('ani3-1');  /**위의 높이에서 .fixed 클래스를 추가합니다. 스타일에서 자유롭게 수치 조절 가능합니다.**/
+    //     }
+    //     else{
+    //         jQuery('.section3').removeClass('ani3');
+    //         jQuery('.slideRight').removeClass('ani3-1');
+    //     }
+    //     return false;
+    // });
+    // }
+    // if (jQuery(window).width() > 0) {
+    // jQuery(window).on("scroll",function(ev){
+    //     if(jQuery(window).scrollTop() > 2000 ) { /**높이 픽셀 조정**/
+    //         jQuery('.section4').addClass('ani4');
+    //         jQuery('.slideLeft2').addClass('ani4-1');
+    //           /**위의 높이에서 .fixed 클래스를 추가합니다. 스타일에서 자유롭게 수치 조절 가능합니다.**/
+    //     }
+    //     else{
+    //         jQuery('.section4').removeClass('ani4');
+    //         jQuery('.slideLeft2').removeClass('ani4-1');
+    //     }
+    //     return false;
+    // });
+    // }
+    // if (jQuery(window).width() > 0) {
+    // jQuery(window).on("scroll",function(ev){
+    //     if(jQuery(window).scrollTop() > 3000 ) { /**높이 픽셀 조정**/
+    //         jQuery('.section5').addClass('ani5');
+    //         jQuery('.slideRight2').addClass('ani5-1');  /**위의 높이에서 .fixed 클래스를 추가합니다. 스타일에서 자유롭게 수치 조절 가능합니다.**/
+    //     }
+    //     else{
+    //         jQuery('.section5').removeClass('ani5');
+    //         jQuery('.slideRight2').removeClass('ani5-1');
+    //     }
+    //     return false;
+    // });
+    // }
+    if (jQuery(window).width() > 0) {
+        jQuery(window).on("scroll",function(ev){
+            if(jQuery(window).scrollTop() > 3500 ) { /**높이 픽셀 조정**/
+                jQuery('.mouse').addClass('a-mouse');
+                jQuery('.mouse').removeClass('mouse');
+                jQuery('.m_scroll_arrows').addClass('a_scroll_arrows'); 
+                jQuery('.m_scroll_arrows').removeClass('m_scroll_arrows');
+                
+            }
+            else{
+                jQuery('.mouse').removeClass('a-mouse');
+                jQuery('.a-mouse').addClass('mouse');
+                jQuery('.a_scroll_arrows').addClass('m_scroll_arrows');
+                jQuery('.a_scroll_arrows').removeClass('a_scroll_arrows'); 
+            }
+            return false;
+        });
+        }
+  
+        
 
     $(function(){
             $("#home").click(function(){
@@ -103,9 +136,14 @@ document.getElementById("defaultOpen").click();
                 var offset=$("#section05").offset();
                 $("html").animate({scrollTop:offset.top},700);
             })
-        })
 
+        })
         
+
+        $( '.ontop' ).click( function() {
+            $( 'html, body' ).animate( { scrollTop : 0 }, 700 );
+            return false;
+        } );    
     
 
     $(function(){
