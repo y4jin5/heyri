@@ -1,7 +1,4 @@
-// wow = new WOW()
-//   wow.init();
   AOS.init();
-
 
 function openCity(evt, cityName) {
   // Declare all variables
@@ -41,59 +38,7 @@ document.getElementById("defaultOpen").click();
         return false;
     });
     }
-    // if (jQuery(window).width() > 0) {
-    // jQuery(window).on("scroll",function(ev){
-    //     if(jQuery(window).scrollTop() > 200 ) { /**높이 픽셀 조정**/
-    //         jQuery('.slideLeft').addClass('ani');
-    //         jQuery('.fade').addClass('ani2');  /**위의 높이에서 .fixed 클래스를 추가합니다. 스타일에서 자유롭게 수치 조절 가능합니다.**/
-    //     }
-    //     else{
-    //         jQuery('.slideLeft').removeClass('ani');
-    //         jQuery('.fade').removeClass('ani2');
-    //     }
-    //     return false;
-    // });
-    // }
-    // if (jQuery(window).width() > 0) {
-    // jQuery(window).on("scroll",function(ev){
-    //     if(jQuery(window).scrollTop() > 1000 ) { /**높이 픽셀 조정**/
-    //         jQuery('.section3').addClass('ani3');
-    //         jQuery('.slideRight').addClass('ani3-1');  /**위의 높이에서 .fixed 클래스를 추가합니다. 스타일에서 자유롭게 수치 조절 가능합니다.**/
-    //     }
-    //     else{
-    //         jQuery('.section3').removeClass('ani3');
-    //         jQuery('.slideRight').removeClass('ani3-1');
-    //     }
-    //     return false;
-    // });
-    // }
-    // if (jQuery(window).width() > 0) {
-    // jQuery(window).on("scroll",function(ev){
-    //     if(jQuery(window).scrollTop() > 2000 ) { /**높이 픽셀 조정**/
-    //         jQuery('.section4').addClass('ani4');
-    //         jQuery('.slideLeft2').addClass('ani4-1');
-    //           /**위의 높이에서 .fixed 클래스를 추가합니다. 스타일에서 자유롭게 수치 조절 가능합니다.**/
-    //     }
-    //     else{
-    //         jQuery('.section4').removeClass('ani4');
-    //         jQuery('.slideLeft2').removeClass('ani4-1');
-    //     }
-    //     return false;
-    // });
-    // }
-    // if (jQuery(window).width() > 0) {
-    // jQuery(window).on("scroll",function(ev){
-    //     if(jQuery(window).scrollTop() > 3000 ) { /**높이 픽셀 조정**/
-    //         jQuery('.section5').addClass('ani5');
-    //         jQuery('.slideRight2').addClass('ani5-1');  /**위의 높이에서 .fixed 클래스를 추가합니다. 스타일에서 자유롭게 수치 조절 가능합니다.**/
-    //     }
-    //     else{
-    //         jQuery('.section5').removeClass('ani5');
-    //         jQuery('.slideRight2').removeClass('ani5-1');
-    //     }
-    //     return false;
-    // });
-    // }
+
     if (jQuery(window).width() > 0) {
         jQuery(window).on("scroll",function(ev){
             if(jQuery(window).scrollTop() > 3500 ) { /**높이 픽셀 조정**/
@@ -155,16 +100,16 @@ document.getElementById("defaultOpen").click();
     var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
 mapOption = { 
     center: new kakao.maps.LatLng(37.789062, 126.698690), // 지도의 중심좌표
-    level: 4 // 지도의 확대 레벨
+    level: 5 // 지도의 확대 레벨
 };
 
 
 
 var map = new kakao.maps.Map(mapContainer, mapOption);
 
-var imageSrc = 'images/mapMarker.png', // 마커이미지의 주소입니다    
-imageSize = new kakao.maps.Size(51, 77), // 마커이미지의 크기입니다
-imageOption = {offset: new kakao.maps.Point(27, 69)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+var imageSrc = 'images/compass.png', // 마커이미지의 주소입니다    
+imageSize = new kakao.maps.Size(73, 77), // 마커이미지의 크기입니다
+imageOption = {offset: new kakao.maps.Point(38, 69)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
 
 // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
 var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
@@ -198,10 +143,11 @@ yAnchor: 1
 });
 
     var swiper = new Swiper('.swiper-container', {
-      slidesPerView: 3.5,
-      centeredSlides: true,
+      slidesPerView: 5,
+    //   centeredSlides: true,
       spaceBetween: 30,
       grabCursor: true,
+      loop:true,
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -209,6 +155,71 @@ yAnchor: 1
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+    500:{
+        centeredSlides: true,
+        slidesPerView: 1.5,
+        loop:true,
+        spaceBetween: 20,
+    },  
+      640: {
+        
+        slidesPerView: 1.5,
+        loop:true,
+        spaceBetween: 20,
       },
-    });
+      768: {
+        loop:true,
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      }
+    }
+  });
 
+    window.onload = function () {
+        var elm = ".box";
+        $(elm).each(function (index) {
+            // 개별적으로 Wheel 이벤트 적용
+            $(this).on("mousewheel DOMMouseScroll", function (e) {
+                e.preventDefault();
+                var delta = 0;
+                if (!event) event = window.event;
+                if (event.wheelDelta) {
+                    delta = event.wheelDelta / 120;
+                    if (window.opera) delta = -delta;
+                } 
+                else if (event.detail)
+                    delta = -event.detail / 3;
+                var moveTop = $(window).scrollTop();
+                var elmSelecter = $(elm).eq(index);
+                // 마우스휠을 위에서 아래로
+                if (delta < 0) {
+                    if ($(elmSelecter).next() != undefined) {
+                        try{
+                            moveTop = $(elmSelecter).next().offset().top;
+                        }catch(e){}
+                    }
+                // 마우스휠을 아래에서 위로
+                } else {
+                    if ($(elmSelecter).prev() != undefined) {
+                        try{
+                            moveTop = $(elmSelecter).prev().offset().top;
+                        }catch(e){}
+                    }
+                }
+                 
+                // 화면 이동 0.8초(800)
+                $("html,body").stop().animate({
+                    scrollTop: moveTop + 'px'
+                }, {
+                    duration: 800, complete: function () {
+                    }
+                });
+            });
+        });
+    }
